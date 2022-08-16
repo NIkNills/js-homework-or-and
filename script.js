@@ -44,3 +44,61 @@ const enterYourName = prompt("Please, enter your name"),
   message = enterYourAge >= 18 ? `Welcome, ${enterYourName}` : `Sorry, ${enterYourName}, access denied`;
 
 console.log(message);
+
+const enterNumberInTheRange = +prompt(
+    "Please enter a number between 0 and 9",
+    "0"
+  );
+  let rangeResult = "";
+  
+  switch (true) {
+    case enterNumberInTheRange === 0:
+      rangeResult = "zero";
+      break;
+  
+    case enterNumberInTheRange === 1:
+      rangeResult = "one";
+      break;
+  
+    case enterNumberInTheRange === 2:
+      rangeResult = "two";
+      break;
+  
+    case enterNumberInTheRange === 3:
+      rangeResult = "three";
+      break;
+  
+    case enterNumberInTheRange === 4:
+      rangeResult = "four";
+      break;
+  
+    case enterNumberInTheRange === 5:
+      rangeResult = "five";
+      break;
+  
+    case enterNumberInTheRange === 6:
+      rangeResult = "six";
+      break;
+  
+    case enterNumberInTheRange === 7:
+      rangeResult = "seven";
+      break;
+  
+    case enterNumberInTheRange === 8:
+      rangeResult = "eight";
+      break;
+  
+    case enterNumberInTheRange === 9:
+      rangeResult = "nine";
+      break;
+  
+    case isNaN(enterNumberInTheRange):
+      rangeResult = "Data entered incorrectly";
+      break;
+  
+    default:
+      rangeResult = "Enter a number in the specified range";
+      break;
+  }
+  
+  console.log(rangeResult);
