@@ -38,3 +38,9 @@ if (!isNaN(enterNumber) && enterNumber !== null && enterNumber !== "") {
 } else {
   console.log("Incorrect data entered");
 }
+
+const enterYourName = prompt("Please, enter your name"),
+  enterYourAge = +prompt("Please, enter your age"),
+  message = enterYourAge >= 18 ? `Welcome, ${enterYourName}` : `Sorry, ${enterYourName}, access denied`;
+
+console.log(message);
