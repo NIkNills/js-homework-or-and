@@ -16,3 +16,25 @@ if (
 } else {
   console.log("Noname");
 }
+
+const enterNumber = prompt("Please enter any number");
+
+if (!isNaN(enterNumber) && enterNumber !== null && enterNumber !== "") {
+  const strictInequality = enterNumber < 100 ? "less" : "more";
+  const evenOrOddNumber = enterNumber % 2 === 0 ? "even" : "odd";
+  const positiveOrNegativeNumber = enterNumber >= 0 ? "positive" : "negative";
+  const fractionalOrNonNumber =
+    enterNumber % 1 === 0 ? "non-fractional" : "fractional";
+
+  console.log(
+    `The number you entered is ${strictInequality} than one hundred, ${evenOrOddNumber}, ${positiveOrNegativeNumber}, ${fractionalOrNonNumber}`
+  );
+} else if (enterNumber !== null && enterNumber !== "") {
+  const messageInTheEnteredLanguage =
+    enterNumber.codePointAt(0) < 1039
+      ? "Please enter number"
+      : "Пожалуйста, введите число";
+  console.log(messageInTheEnteredLanguage);
+} else {
+  console.log("Incorrect data entered");
+}
